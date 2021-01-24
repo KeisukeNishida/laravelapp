@@ -18,13 +18,10 @@ class HelloController extends Controller
 
   public function post(Request $request)
   {
-      $msg = $request->msg;
-      $data = [
-      'msg'=>'こんにちは、'. $msg . 'さん！',
-     ];
-  return view('index',$data);
 
-}
+  return view('index',['msg'=>$request->msg]);
+
+   }
 }
 
 
